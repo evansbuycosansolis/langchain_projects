@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AskMyPDF - PDF Q&A App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>AskMyPDF</h1>
+    <!-- Upload PDF Form -->
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdf" accept="application/pdf" required>
+        <button type="submit">Upload PDF</button>
+    </form>
+    {% if message %}
+    <p style="color:lightgreen;">{{ message }}</p>
+    {% endif %}
+
+    <!-- Show Q&A if PDF uploaded -->
+    {% if pdf_uploaded %}
+    <hr>
+    <form method="POST">
+        <input type="hidden" name="pdf_filename" value="{{ pdf_filename }}">
+        <label for="question">Ask a question about your PDF:</label><br>
+        <input type="text" name="question" required style="width:300px">
+        <button type="submit">Ask</button>
+    </form>
+    {% endif %}
+
+    {% if answer %}
+    <hr>
+    <h3>Answer:</h3>
+    <div style="background:#333;padding:10px;border-radius:5px;">
+        {{ answer }}
+    </div>
+    {% endif %}
+</body>
+</html>

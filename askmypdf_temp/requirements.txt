@@ -1,0 +1,9 @@
+flask
+langchain==0.3.25
+langchain-openai
+langchain-community
+openai
+pypdf
+pdfminer.six          # for PDFMinerLoader (alternative loader)
+pytesseract           # for OCR (scanned PDFs)
+pdf2image             # convert PDF pages to images (OCR)
