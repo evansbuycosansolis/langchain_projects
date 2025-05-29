@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask the Bible</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ask the Bible</h1>
+
+    <form method="POST">
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" required style="width:400px" value="{{ question }}"><br><br>
+        <button type="submit">Ask</button>
+
+    </form>
+
+    {% if message %}
+    <p style="color:orange;">{{ message }}</p>
+    {% endif %}
+
+    {% if question %}
+    <hr>
+    <h3>Question:</h3>
+    <p>{{ question }}</p>
+    {% endif %}
+
+    {% if answer %}
+    <h3>Answer:</h3>
+    <div style="background:#333;padding:10px;border-radius:5px;">
+        {{ answer }}
+    </div>
+    {% elif question %}
+    <p style="color:red;">No answer found in the Bible.</p>
+    {% endif %}
+</body>
+</html>
