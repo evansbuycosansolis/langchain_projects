@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
+=======
+# Python
+>>>>>>> 61035ed (Add .gitignore file)
 __pycache__/
 *.py[cod]
 *$py.class
 
+<<<<<<< HEAD
 # Virtual environment
+=======
+# Virtual environments
+>>>>>>> 61035ed (Add .gitignore file)
 .venv/
 venv/
 env/
@@ -11,6 +19,7 @@ env/
 # Environment variables
 .env
 
+<<<<<<< HEAD
 # IDEs
 .vscode/
 .idea/
@@ -19,5 +28,15 @@ env/
 *.log
 
 # System files
+=======
+# Logs
+*.log
+
+# VS Code and other IDEs
+.vscode/
+.idea/
+
+# System
+>>>>>>> 61035ed (Add .gitignore file)
 .DS_Store
 Thumbs.db
