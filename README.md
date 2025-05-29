@@ -39,18 +39,14 @@ python app.py
 ChatWebsite is a Flask-based app that lets users ask questions about the content of any public webpage. It uses LangChain's WebBaseLoader to fetch and parse website data, OpenAI's ChatOpenAI for LLM responses, and supports user interaction via a simple HTML frontend.
 
 Features
-Accepts any URL input
+- Accepts any URL input
+- Extracts webpage content with BeautifulSoup via LangChain
+- Splits text for optimal LLM processing using CharacterTextSplitter
+- Generates intelligent answers using OpenAI’s GPT models
+- Lightweight frontend with Flask
 
-Extracts webpage content with BeautifulSoup via LangChain
-
-Splits text for optimal LLM processing using CharacterTextSplitter
-
-Generates intelligent answers using OpenAI’s GPT models
-
-Lightweight frontend with Flask
-
-Run Locally
-####bash
+#### Run Locally
+#### bash
 
 #### Navigate into the project folder
 cd chatwebsite
