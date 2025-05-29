@@ -19,18 +19,18 @@ A Flask-based web app that allows you to upload a PDF and ask questions about it
 
 #### Run Locally
 
-# bash
-# Navigate into the project folder
+#### bash
+#### Navigate into the project folder
 cd askmypdf
 
-# Create and activate virtual environment
+#### Create and activate virtual environment
 python -m venv .venv
 source .venv/bin/activate      # On Windows: .venv\Scripts\activate
 
-# Install dependencies
+#### Install dependencies
 pip install -r requirements.txt
 
-# Run the Flask app
+#### Run the Flask app
 python app.py
 
 
@@ -50,17 +50,17 @@ Generates intelligent answers using OpenAI’s GPT models
 Lightweight frontend with Flask
 
 Run Locally
-#bash
+####bash
 
-# Navigate into the project folder
+#### Navigate into the project folder
 cd chatwebsite
 
-# Create and activate virtual environment
+#### Create and activate virtual environment
 python -m venv .venv
 source .venv/bin/activate    # On Windows: .venv\Scripts\activate
 
-# Install dependencies
+#### Install dependencies
 pip install -r requirements.txt
 
-# Run the Flask app
+#### Run the Flask app
 python app.py
