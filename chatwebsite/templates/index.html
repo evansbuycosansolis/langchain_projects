@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat With Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Chat With Website</h1>
+    <form method="POST">
+        <label for="url">Website URL:</label><br>
+        <input type="text" id="url" name="url" required style="width:400px" value="{{ url }}"><br><br>
+        <label for="question">Ask a question about this website:</label><br>
+        <input type="text" id="question" name="question" required style="width:400px"><br><br>
+        <button type="submit">Ask</button>
+    </form>
+    {% if message %}
+    <p style="color:orange;">{{ message }}</p>
+    {% endif %}
+    {% if answer %}
+    <hr>
+    <h3>Answer:</h3>
+    <div style="background:#333;padding:10px;border-radius:5px;">
+        {{ answer }}
+    </div>
+    {% endif %}
+</body>
+
+</html>
